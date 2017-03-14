@@ -44,7 +44,7 @@ int main() {
 	//output deck
 	//deck->displayDeck();
 
-
+	//game output
 	std::cout << "Welcome to Pandemic assignment 1 part 3 driver." << std::endl;
 	std::cout << "===============================================" << std::endl;
 	std::cout << "What is the name of player 1: ";
@@ -58,7 +58,23 @@ int main() {
 	Player *p1(new Player(player1));
 	Player *p2(new Player(player2));
 
-	p1->getReferenceCard();
+	//initialize player role
+	int role1 = rand() % 7;
+	int role2 = rand() % 7;
+	while (role1 == role2)
+	{
+		role2 = rand() % 7;
+	}
+	p1->setRole(role1);
+	p2->setRole(role2);
+
+	//output role
+	p1->getRole()->output();
+	p2->getRole()->output();
+
+	//every player has a reference card
+	//p1->getReferenceCard();
+
 	//populate individual player hands
 	for (int i = 0; i < deck->getPlayerHand().size(); i++){
 		p1->addCard(deck->getPlayerHand().at(i));
