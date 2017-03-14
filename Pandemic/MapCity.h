@@ -9,7 +9,7 @@ private:
 	std::string name;
 	std::vector <MapCity*> neighbours;
 	bool isInfected; 
-	bool epidemic; 
+	//bool epidemic; 
 	int blueCubes; 
 	int redCubes; 
 	int blackCubes;

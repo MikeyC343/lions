@@ -58,7 +58,7 @@ int main() {
 	Player *p1(new Player(player1));
 	Player *p2(new Player(player2));
 
-	p1->getReferenceCard();
+	//p1->getReferenceCard();
 	//populate individual player hands
 	for (int i = 0; i < deck->getPlayerHand().size(); i++){
 		p1->addCard(deck->getPlayerHand().at(i));
@@ -91,7 +91,8 @@ int main() {
 			o = 2;
 			std::cout << o << " : use 1 event card." << std::endl;
 		}
-		std::cout << o + 1 << " : end the game." << std::endl;
+		std::cout << o + 1 << " : check actions on reference card" << std::endl;
+		std::cout << o + 2 << " : end the game." << std::endl;
 		std::cin >> option;
 
 		options: {
@@ -103,7 +104,40 @@ int main() {
 				std::cout << "Turns out events are useless too. Next players turn.";
 				goto proceed;
 			}
+
+
 			else if (option == std::to_string(o + 1)) {
+				p1->getReferenceCard();
+				std::cout << "You have up to 4 actions to do, you can either pick a number to perform the action, or skip your actions by pressing 0. What would you like to do?" << std::endl;
+				int playerTurns = 4;
+				int playerInput;
+				std::cin >> playerInput;
+				while (playerTurns <= 0 || playerInput != 0)
+				{
+					if (playerInput == 1 || playerInput == 2 || playerInput == 3 || playerInput == 4)
+					{
+						std::cout << "Doing " << playerInput << "'s actions. We have not yet implemented the actions" << std::endl;
+						playerTurns--;
+						if (playerTurns <= 0)
+						{
+							std::cout << "No more actions to do!" << std::endl;
+							break;
+						}
+						std::cout << "Would you like to perform another action? Press 0 to skip." << std::endl;
+						std::cin >> playerInput;
+					}
+
+					else if (playerInput == 0)
+					{
+						std::cout << "Confirmed! Exiting now . . . " << std::endl;
+						break;
+					}
+				}
+				
+
+			}
+
+			else if (option == std::to_string(o + 2)) {
 				std::cout << "Game ended!" << std::endl;
 				goto endgame;
 			}
@@ -133,7 +167,8 @@ int main() {
 			o = 2;
 			std::cout << o << " : use 1 event card." << std::endl;
 		}
-		std::cout << o + 1 << " : end the game." << std::endl;
+		std::cout << o + 1 << " : check actions on reference card" << std::endl;
+		std::cout << o + 2 << " : end the game." << std::endl;
 		std::cin >> option;
 
 		options2: {
@@ -146,6 +181,37 @@ int main() {
 				goto proceed2;
 			}
 			else if (option == std::to_string(o + 1)) {
+				p2->getReferenceCard();
+				std::cout << "You have up to 4 actions to do, you can either pick a number to perform the action, or skip your actions by pressing 0. What would you like to do?" << std::endl;
+				int playerTurns = 4;
+				int playerInput;
+				std::cin >> playerInput;
+				while (playerTurns != 0 || playerInput != 0)
+				{
+					if (playerInput == 1 || playerInput == 2 || playerInput == 3 || playerInput == 4)
+					{
+						std::cout << "Doing " << playerInput << "'s actions. We have not yet implemented the actions" << std::endl;
+						playerTurns--;
+						if (playerTurns <= 0)
+						{
+							std::cout << "No more actions to do!" << std::endl;
+							break;
+						}
+						std::cout << "Would you like to perform another action? Press 0 to skip.";
+						std::cin >> playerInput;
+					}
+
+					else if (playerInput == 0)
+					{
+						std::cout << "Confirmed! Exiting now . . . " << std::endl;
+						break;
+					}
+				}
+
+
+			}
+
+			else if (option == std::to_string(o + 2)) {
 				std::cout << "Game ended!" << std::endl;
 				goto endgame;
 			}
