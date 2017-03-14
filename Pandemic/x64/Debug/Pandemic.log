@@ -1,19 +1,31 @@
-﻿Build started 2/21/2017 2:49:47 PM.
-     1>Project "G:\My Documents\GitHub\pandemic\Pandemic\Pandemic.vcxproj" on node 2 (Build target(s)).
+﻿Build started 3/14/2017 2:28:43 PM.
+     1>Project "G:\My Documents\GitHub\lions\Pandemic\Pandemic.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /Zi /nologo /W3 /WX- /sdl /Od /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Debug\\" /Fd"x64\Debug\vc120.pdb" /Gd /TP /errorReport:prompt main.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /Zi /nologo /W3 /WX- /sdl /Od /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Debug\\" /Fd"x64\Debug\vc120.pdb" /Gd /TP /errorReport:prompt City.cpp Deck.cpp Epidemic.cpp Event.cpp main.cpp Player.cpp PlayerCard.cpp reference_cards.cpp roles.cpp
+         roles.cpp
+         reference_cards.cpp
+         PlayerCard.cpp
+         Player.cpp
          main.cpp
+         Event.cpp
+         Epidemic.cpp
+         Deck.cpp
+     1>Deck.cpp(35): warning C4267: 'initializing' : conversion from 'size_t' to 'int', possible loss of data
+         City.cpp
+         Generating Code...
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"G:\My Documents\GitHub\pandemic\x64\Debug\Pandemic.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"G:\My Documents\GitHub\pandemic\x64\Debug\Pandemic.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"G:\My Documents\GitHub\pandemic\x64\Debug\Pandemic.lib" /MACHINE:X64 x64\Debug\City.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"G:\My Documents\GitHub\lions\x64\Debug\Pandemic.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"G:\My Documents\GitHub\lions\x64\Debug\Pandemic.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"G:\My Documents\GitHub\lions\x64\Debug\Pandemic.lib" /MACHINE:X64 x64\Debug\City.obj
          x64\Debug\Deck.obj
          x64\Debug\Epidemic.obj
          x64\Debug\Event.obj
          x64\Debug\main.obj
          x64\Debug\Player.obj
          x64\Debug\PlayerCard.obj
-         Pandemic.vcxproj -> G:\My Documents\GitHub\pandemic\x64\Debug\Pandemic.exe
-     1>Done Building Project "G:\My Documents\GitHub\pandemic\Pandemic\Pandemic.vcxproj" (Build target(s)).
+         x64\Debug\reference_cards.obj
+         x64\Debug\roles.obj
+         Pandemic.vcxproj -> G:\My Documents\GitHub\lions\x64\Debug\Pandemic.exe
+     1>Done Building Project "G:\My Documents\GitHub\lions\Pandemic\Pandemic.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:05.32
+Time Elapsed 00:00:18.20

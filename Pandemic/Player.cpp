@@ -33,3 +33,11 @@ void Player::displayHand()
 void Player::getReferenceCard(){
 	reference_card->output();
 }
+
+void Player::setRole(int i){
+	role = new roles(i);
+}
+
+roles* Player::getRole(){
+	return role;
+}
