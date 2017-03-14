@@ -151,6 +151,7 @@
     <ClInclude Include="Epidemic.h" />
     <ClInclude Include="Event.h" />
     <ClInclude Include="InfectionCard.h" />
+    <ClInclude Include="MapCity.h" />
     <ClInclude Include="Pawn.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="PlayerCard.h" />
@@ -164,6 +165,7 @@
     <ClCompile Include="Event.cpp" />
     <ClCompile Include="InfectionCard.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MapCity.cpp" />
     <ClCompile Include="Pawn.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="PlayerCard.cpp" />
