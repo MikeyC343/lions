@@ -17,4 +17,4 @@ private:
 	std::string citycolor;
 	std::string type;
 	int population;
-};
+};   
